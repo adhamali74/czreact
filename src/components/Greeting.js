@@ -1,10 +1,10 @@
 /** @format */
 
-function Greeting() {
-  const variableName = "Adham";
+function Greeting(props) {
+  // const variableName = "Adham";
   return (
 
-      <h2>Hello,{variableName}</h2>
+      <h2>Guten Morgen ,{props.name}</h2>
   )
 }
 export default Greeting;
