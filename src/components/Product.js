@@ -8,6 +8,7 @@ function Product(props) {
       <p>{props.price}</p>
       <Button title={props.buttonTitle} />
     </div>
+    
   );
 }
 export default Product;
