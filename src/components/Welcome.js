@@ -1,13 +1,34 @@
 /** @format */
 
-function Welcome(props) {
-  return (
-    <>
-      <h2>Welcome to React ,{props.name}</h2>
-      <p>
-        Your age is {props.age}, and your hobby is {props.hobby}.
-      </p>
-    </>
-  );
+import React from "react";
+
+class Welcome extends React.Component {
+  state = {
+    firstName: "Adham",
+    lastName: "Hussien",
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>
+          This is created using state by {this.state.firstName}{" "}
+          {this.state.lastName}
+        </h1>
+        <button
+          onClick={() => {
+            this.setState({
+              firstName: "Adhaaaaaaam",
+              lastName: "Hussieeeeeen",
+            });
+          }}
+        >
+          {" "}
+          Change the Names{" "}
+        </button>
+      </div>
+    );
+  }
 }
+
 export default Welcome;

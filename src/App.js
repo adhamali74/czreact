@@ -4,11 +4,9 @@ import Welcome from "./components/Welcome";
 import Product from "./components/Product";
 function App() {
   return (
-    <>
-      <div className="App"></div>
-      <Greeting name="Adhaam" />
+    <div className="App">
+      <Greeting />
       <Welcome name="Adham" age="28" hobby="football" />
-      <Welcome name="Hussien" age="35" hobby="soccer" />
       <Product
         name="Nike Shoes"
         description="High-performance shoes"
@@ -27,7 +25,7 @@ function App() {
         price="150"
         buttonTitle="Add to Basket"
       />
-    </>
+    </div>
   );
 }
 export default App;
