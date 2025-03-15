@@ -1,15 +1,20 @@
 /** @format */
 
 function Button(props) {
+  const btnHandler = () => {
+    console.log("Button clicked");
+  };
+  const mouseLeaveHandler = () => {
+    console.log("Mouse left the button");
+  };
   return (
     <button
       className="react-btn"
-      onClick={() => {
-        alert("Button clicked");
-        console.log("Button clicked");
-      }}
+      onMouseEnter={btnHandler}
+      onMouseLeave={mouseLeaveHandler}
     >
       {props.buttonTitle}
+      Click Me
     </button>
   );
 }
