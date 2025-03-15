@@ -6,9 +6,8 @@ function Product(props) {
       <h1>{props.name}</h1>
       <p>{props.description}</p>
       <p>{props.price}</p>
-      <Button title={props.buttonTitle} />
+      <Button buttonTitle={props.buttonTitle} />
     </div>
-    
   );
 }
 export default Product;
