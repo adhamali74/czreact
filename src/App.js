@@ -1,6 +1,9 @@
 /** @format */
 
 import { useState } from "react";
+import Greeting from "./components/Greeting";
+import Guest from "./components/Guest";
+import Lists from "./components/Lists";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -20,7 +23,7 @@ function App() {
       >
         Login
       </button>
-      {isLoggedIn ? <h1>Welcome back!</h1> : <h1>Please log in.</h1>}
+      {isLoggedIn ? <Greeting name="Adham" /> : <Guest />}
       <br></br>
       <button
         onClick={() => {
@@ -29,6 +32,7 @@ function App() {
       >
         logout
       </button>
+      {<Lists />}
     </div>
   );
 }
