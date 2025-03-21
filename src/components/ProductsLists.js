@@ -1,16 +1,11 @@
 /** @format */
 import ProductsData from "../ProductsData";
+import Products from "./Products";
 
 function ProductsLists() {
   console.log(ProductsData);
-  let products = ProductsData.map((x, index) => {
-    return (
-      <div className="product" key={x.id}>
-        <h2>
-          {x.id}: {x.title} <br />
-        </h2>
-      </div>
-    );
+  let products = ProductsData.map((product) => {
+    return <Products product={product} key={product.id}></Products>;
   });
 
   return <div>{products}</div>;
