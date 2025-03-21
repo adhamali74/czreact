@@ -1,12 +1,13 @@
 /** @format */
 
-import { useState } from "react";
-import Greeting from "./components/Greeting";
-import Guest from "./components/Guest";
-import Lists from "./components/Lists";
+// import { useState } from "react";
+import ProductsLists from "./components/ProductsLists";
+// import Greeting from "./components/Greeting";
+// import Guest from "./components/Guest";
+// import Lists from "./components/Lists";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // if (isLoggedIn) {
   //   element = <h1>Welcome back!</h1>;
@@ -16,23 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <button
-        onClick={() => {
-          setIsLoggedIn(true);
-        }}
-      >
-        Login
-      </button>
-      {isLoggedIn ? <Greeting name="Adham" /> : <Guest />}
-      <br></br>
-      <button
-        onClick={() => {
-          setIsLoggedIn(false);
-        }}
-      >
-        logout
-      </button>
-      {<Lists />}
+      <ProductsLists />
     </div>
   );
 }
